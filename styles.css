@@ -1,0 +1,75 @@
+html {
+  --light: #f4f4f4;
+  --dark: #161616;
+  --text: var(--dark);
+  --background: var(--light);
+}
+
+html[data-dark-mode] {
+  --text: var(--light);
+  --background: var(--dark);
+}
+
+body {
+  font-family: "IBM Plex Sans", system;
+  color: var(--text);
+  background-color: var(--background);
+  position: relative;
+  transition-duration: 500ms;
+  transition-property: color, background-color;
+  transition-timing-function: ease;
+  padding: 1rem;
+}
+
+main {
+  max-width: 700px;
+  margin: 160px auto;
+  position: relative;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 3.375rem;
+  line-height: 64px;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+p {
+  font-family: "IBM Plex Sans KR", system;
+  font-size: 16px;
+  line-height: 1.5rem;
+}
+
+button {
+  position: absolute;
+  top: 0;
+  right: -0.5rem;
+  padding: 0.5rem;
+  height: 64px;
+  width: 64px;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+button svg {
+  width: 100%;
+  transition: all 500ms ease;
+  fill: var(--text);
+}
+
+a {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 120px;
+  color: var(--text);
+}
