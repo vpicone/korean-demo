@@ -15,15 +15,115 @@
       );
     </script>
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
-    <link rel="alternate icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/ibm-plex-sans-kr.css" />
     <link rel="stylesheet" href="./css/ibm-plex.css" />
     <meta property="og:title" content="IBM Plex Sans KR" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://plex-korean-demo.vercel.app" />
     <meta property="og:image" content="/images/plex-korean-demo-og.png" />
+    <style>
+      @import "./css/normalize.css";
+
+      html {
+        --light: #f4f4f4;
+        --dark: #161616;
+        --text: var(--dark);
+        --background: var(--light);
+      }
+
+      html *:focus {
+        outline: 2px solid var(--text);
+      }
+
+      html[data-dark-mode="true"] {
+        --text: var(--light);
+        --background: var(--dark);
+      }
+
+      body {
+        font-family: "IBM Plex Sans", system;
+        color: var(--text);
+        background-color: var(--background);
+        position: relative;
+        transition-duration: 200ms;
+        transition-property: color, background-color;
+        transition-timing-function: ease;
+        padding: 1rem;
+        max-width: 700px;
+        margin: 160px auto;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      h1 {
+        font-weight: 300;
+        font-size: 3.375rem;
+        line-height: 64px;
+        padding-right: 1rem;
+        margin-top: 0;
+      }
+
+      h2 {
+        font-weight: 400;
+        font-size: 1.25rem;
+      }
+
+      p {
+        font-family: "IBM Plex Sans KR", system;
+        font-size: 16px;
+      }
+
+      button {
+        position: absolute;
+        top: 1rem;
+        right: 0.5rem;
+        padding: 0.5rem;
+        height: 64px;
+        width: 64px;
+        border: none;
+        font: inherit;
+        color: inherit;
+        background-color: transparent;
+        cursor: pointer;
+        display: grid;
+        place-items: center;
+      }
+
+      *::-moz-focus-inner {
+        border: 0;
+      }
+
+      button svg {
+        width: 100%;
+        transition: all 200ms ease;
+        fill: var(--text);
+      }
+
+      footer {
+        display: flex;
+        justify-content: space-between;
+        /* padding-bottom: 1rem; */
+      }
+
+      a {
+        display: block;
+        font-weight: 400;
+        font-size: 14px;
+        margin-top: 120px;
+        color: var(--text);
+        outline-offset: 8px;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+        h1 {
+          line-height: 1.15;
+        }
+      }
+    </style>
   </head>
   <body>
     <main>
