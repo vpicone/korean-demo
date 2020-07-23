@@ -5,6 +5,10 @@ html {
   --background: var(--light);
 }
 
+html *:focus {
+  outline: 2px solid var(--text);
+}
+
 html[data-dark-mode="true"] {
   --text: var(--light);
   --background: var(--dark);
@@ -59,6 +63,10 @@ button {
   place-items: center;
 }
 
+*::-moz-focus-inner {
+  border: 0;
+}
+
 button svg {
   width: 100%;
   transition: all 200ms ease;
@@ -77,6 +85,7 @@ a {
   font-size: 14px;
   margin-top: 120px;
   color: var(--text);
+  outline-offset: 8px;
 }
 
 @media (max-width: 600px) {
