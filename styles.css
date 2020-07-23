@@ -15,7 +15,7 @@ body {
   color: var(--text);
   background-color: var(--background);
   position: relative;
-  transition-duration: 500ms;
+  transition-duration: 200ms;
   transition-property: color, background-color;
   transition-timing-function: ease;
   padding: 1rem;
@@ -62,7 +62,7 @@ button {
 
 button svg {
   width: 100%;
-  transition: all 500ms ease;
+  transition: all 200ms ease;
   fill: var(--text);
 }
 
