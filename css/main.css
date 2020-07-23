@@ -1,8 +1,22 @@
+@import "./reset.css";
+
 html {
   --light: #f4f4f4;
   --dark: #161616;
   --text: var(--dark);
   --background: var(--light);
+  --ratio: 1.5;
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
 }
 
 html *:focus {
@@ -18,42 +32,80 @@ body {
   font-family: "IBM Plex Sans", system;
   color: var(--text);
   background-color: var(--background);
-  position: relative;
   transition-duration: 200ms;
   transition-property: color, background-color;
   transition-timing-function: ease;
   padding: 1rem;
   max-width: 700px;
   margin: 160px auto;
-  position: relative;
   overflow-x: hidden;
 }
 
+main {
+  position: relative;
+}
+
+.stack {
+  --space: var(--s1);
+}
+
+.stack * + * {
+  margin-top: var(--space);
+}
+
+/* Experimenting with https://seek-oss.github.io/capsize/ */
 h1 {
-  font-weight: 300;
-  font-size: 3.375rem;
-  line-height: 64px;
+  font-weight: 600;
   padding-right: 1rem;
   margin-top: 0;
+  font-size: 57.30659025787966px;
+  line-height: 64px;
+  padding: 0.05px 0;
+}
+
+h1::before {
+  content: "";
+  margin-top: -0.23627249999999989em;
+  display: block;
+  height: 0;
+}
+
+h1::after {
+  content: "";
+  margin-bottom: -0.18427249999999995em;
+  display: block;
+  height: 0;
+}
+
+h1 + * {
+  --space: var(--s3);
 }
 
 h2 {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.25rem;
+  color: #525252;
+}
+
+[data-dark-mode="true"] h2 {
+  color: #c6c6c6;
+}
+
+h2 + * {
+  --space: var(--s1);
 }
 
 p {
   font-family: "IBM Plex Sans KR", system;
   font-size: 16px;
+  line-height: 1.5;
 }
 
 button {
-  position: absolute;
-  top: 1rem;
-  right: 0.5rem;
   padding: 0.5rem;
-  height: 64px;
-  width: 64px;
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
   border: none;
   font: inherit;
   color: inherit;
@@ -61,10 +113,6 @@ button {
   cursor: pointer;
   display: grid;
   place-items: center;
-}
-
-*::-moz-focus-inner {
-  border: 0;
 }
 
 button svg {
@@ -76,7 +124,6 @@ button svg {
 footer {
   display: flex;
   justify-content: space-between;
-  /* padding-bottom: 1rem; */
 }
 
 a {
@@ -92,8 +139,5 @@ a {
   body {
     margin-top: 0;
     margin-bottom: 0;
-  }
-  h1 {
-    line-height: 1.15;
   }
 }
