@@ -126,11 +126,9 @@
       document
         .querySelector(".dark-mode-toggle")
         .addEventListener("click", () => {
-          document.documentElement.toggleAttribute("data-dark-mode");
-          const isDarkMode = localStorage.getItem("dark-mode") === "1";
-          console.log(isDarkMode);
-
-          localStorage.setItem("dark-mode", isDarkMode ? "0" : "1");
+          const isDarkMode = localStorage.getItem("dark-mode") === "true";
+          document.documentElement.setAttribute("data-dark-mode", !isDarkMode);
+          localStorage.setItem("dark-mode", !isDarkMode);
         });
     </script>
   </body>

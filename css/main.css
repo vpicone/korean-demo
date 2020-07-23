@@ -5,7 +5,7 @@ html {
   --background: var(--light);
 }
 
-html[data-dark-mode] {
+html[data-dark-mode="true"] {
   --text: var(--light);
   --background: var(--dark);
 }
