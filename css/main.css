@@ -19,18 +19,18 @@ body {
   transition-property: color, background-color;
   transition-timing-function: ease;
   padding: 1rem;
-}
-
-main {
   max-width: 700px;
   margin: 160px auto;
   position: relative;
+  overflow-x: hidden;
 }
 
 h1 {
   font-weight: 300;
   font-size: 3.375rem;
   line-height: 64px;
+  padding-right: 1rem;
+  margin-top: 0;
 }
 
 h2 {
@@ -41,13 +41,12 @@ h2 {
 p {
   font-family: "IBM Plex Sans KR", system;
   font-size: 16px;
-  line-height: 1.5rem;
 }
 
 button {
   position: absolute;
-  top: 0;
-  right: -0.5rem;
+  top: 1rem;
+  right: 0.5rem;
   padding: 0.5rem;
   height: 64px;
   width: 64px;
@@ -66,10 +65,26 @@ button svg {
   fill: var(--text);
 }
 
+footer {
+  display: flex;
+  justify-content: space-between;
+  /* padding-bottom: 1rem; */
+}
+
 a {
   display: block;
   font-weight: 400;
   font-size: 14px;
   margin-top: 120px;
   color: var(--text);
+}
+
+@media (max-width: 600px) {
+  body {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  h1 {
+    line-height: 1.15;
+  }
 }
