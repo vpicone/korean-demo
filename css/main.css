@@ -56,39 +56,25 @@ main {
 /* Experimenting with https://seek-oss.github.io/capsize/ */
 h1 {
   font-weight: 600;
-  padding-right: 1rem;
   margin-top: 0;
-  font-size: 57.30659025787966px;
-  line-height: 64px;
-  padding: 0.05px 0;
-}
-
-h1::before {
-  content: "";
-  margin-top: -0.23627249999999989em;
-  display: block;
-  height: 0;
-}
-
-h1::after {
-  content: "";
-  margin-bottom: -0.18427249999999995em;
-  display: block;
-  height: 0;
+  font-size: 54px;
+  line-height: 0.9;
 }
 
 h1 + * {
   --space: var(--s3);
 }
 
+.subheader {
+  font-weight: 500;
+  font-size: 20px;
+  white-space: nowrap;
+  color: #8d8d8d;
+}
+
 h2 {
   font-weight: 300;
   font-size: 1.25rem;
-  color: #525252;
-}
-
-[data-dark-mode="true"] h2 {
-  color: #c6c6c6;
 }
 
 h2 + * {
@@ -111,12 +97,9 @@ button {
   color: inherit;
   background-color: transparent;
   cursor: pointer;
-  display: grid;
-  place-items: center;
 }
 
 button svg {
-  width: 100%;
   transition: all 200ms ease;
   fill: var(--text);
 }
@@ -139,5 +122,15 @@ a {
   body {
     margin-top: 0;
     margin-bottom: 0;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  button {
+    top: -0.75rem;
+  }
+  button svg {
+    height: 32px;
+    width: 32px;
   }
 }
