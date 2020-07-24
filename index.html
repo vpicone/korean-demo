@@ -11,7 +11,7 @@
     <script>
       window.onload = () => {
         document
-          .querySelectorAll("#stylesheet-link")
+          .querySelectorAll(".stylesheet-link")
           .forEach((el) => (el.rel = "stylesheet"));
       };
       document.documentElement.setAttribute(
@@ -38,13 +38,13 @@
     <link
       rel="preload"
       as="style"
-      id="stylesheet-link"
+      class="stylesheet-link"
       href="./css/ibm-plex.css"
     />
     <link
       rel="preload"
       as="style"
-      id="stylesheet-link"
+      class="stylesheet-link"
       href="./css/ibm-plex-sans-kr.css"
     />
     <meta property="og:title" content="IBM Plex Sans KR" />
