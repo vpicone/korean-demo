@@ -69,8 +69,12 @@ h1 {
   font-weight: 700;
   font-size: 24px;
   white-space: nowrap;
-  color: #8d8d8d;
+  color: #6f6f6f;
   font-family: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Dotum";
+}
+
+[data-dark-mode="true"] .subheader {
+  color: #a8a8a8;
 }
 
 h2 {
