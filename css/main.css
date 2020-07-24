@@ -29,7 +29,7 @@ html[data-dark-mode="true"] {
 }
 
 body {
-  font-family: "IBM Plex Sans", system;
+  font-family: "IBM Plex Sans", "Apple SD Gothic Neo", "Dotum";
   color: var(--text);
   background-color: var(--background);
   transition-duration: 200ms;
@@ -61,8 +61,8 @@ h1 {
   line-height: 0.9;
 }
 
-h1 + * {
-  --space: var(--s3);
+.subheader + * {
+  --space: var(--s2);
 }
 
 .subheader {
@@ -70,7 +70,7 @@ h1 + * {
   font-size: 24px;
   white-space: nowrap;
   color: #8d8d8d;
-  font-family: "IBM Plex Sans KR", system;
+  font-family: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Dotum";
 }
 
 h2 {
@@ -78,12 +78,8 @@ h2 {
   font-size: 1.25rem;
 }
 
-h2 + * {
-  --space: var(--s1);
-}
-
 p {
-  font-family: "IBM Plex Sans KR", system;
+  font-family: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Dotum";
   font-size: 16px;
   line-height: 1.5;
 }
